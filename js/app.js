@@ -7,8 +7,10 @@ function cifrar (elemento) {
   let caracteresT = String.fromCharCode(fraseCifrada);
   document.getElementById("resultado").innerHTML = caracteresT;
 }
-//function descifrar (elemento) {
-  //let frase = document.getElementsByTagName("input")[0].value;
-  //let fraseDesifrada = [(frase - 65  + 7 ) % 26 - 65];
-  //document.getElementById("resultado").innerHTML = fraseDesifrada;
-//}
+function descifrar (elemento) {
+  let fraseR = document.getElementsByTagName("input")[0].value;
+  let caracteresR = fraseR.charCodeAt(0);
+  let fraseDesifrada = [(caracteresR - 65  - 7 ) % 26 + 65];
+  let caracteresL = String.fromCharCode(fraseDesifrada);
+  document.getElementById("resultado").innerHTML = caracteresL;
+}
